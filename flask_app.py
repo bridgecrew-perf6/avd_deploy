@@ -1,9 +1,9 @@
 from flask import Flask, jsonify, request
-import os
+import pathlib
 import pickle
 from train import do_train
 
-os.chdir(os.path.dirname(__file__))
+cwd = pathlib.Path.cwd
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
